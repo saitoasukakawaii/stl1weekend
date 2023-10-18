@@ -394,7 +394,7 @@ struct Vector {
         reserve(n);
         m_size = n;
         for (size_t i = 0; i != n; i++) {
-            std::construct_at(m_data[i], *first);
+            std::construct_at(&m_data[i], *first);
             ++first;
         }
     }
